@@ -40,4 +40,20 @@ public class Methods<ans> {
         zapis.close();
     }
 
+    static void addNewCar(Queue kolejka) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj dane pojazdu: Typ, Model, Markę, Rok Produkcji, Przebieg, numer VIN");
+        String typ = scanner.nextLine();
+        String model = scanner.nextLine();
+        String marka = scanner.nextLine();
+        int rok = scanner.nextInt();
+        int przebieg = scanner.nextInt();
+        scanner.nextLine();
+        String VIN = scanner.nextLine();
+        Car car = new Car(typ, model, marka, rok, przebieg, VIN);
+        System.out.println(car);
+        kolejka.add(car);
+
+    }
+
 }
